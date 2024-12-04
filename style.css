@@ -1,0 +1,113 @@
+:root {
+  --br-top: 0.5rem 0.5rem 0 0;
+  --br-bottom: 0 0 0.5rem 0.5rem;
+  --br-all: 0.5rem;
+}
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100vw;
+  text-align: center;
+  color: #6f7b95;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+#hero {
+  background-image: url(https://th.bing.com/th/id/R.25daea5a615ef89514838a13f3985600?rik=%2bckQabnLt9Hsxg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fwp1842999.jpg&ehk=%2b89QNbfgx00hzg%2fm%2fv0Bm3XdJKWVcs7lTTAMmb7zhDY%3d&risl=&pid=ImgRaw&r=0);
+  background-size: cover;
+  height: 20rem;
+  border-radius: var(--br-top);
+}
+
+/* https://coolors.co/palette/1b1210-6f7b95-625046-3f302a-4a4848 */
+h1 {
+  font-family: "DynaPuff", system-ui;
+  padding: 1.5rem 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 0px #1b1210;
+  letter-spacing: 1px;
+}
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 0.9rem;
+}
+.below-hero {
+  margin-block: 1rem;
+}
+.food-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: var(--br-all);
+}
+.wine {
+  position: relative;
+}
+.price {
+  font-size: 0.8rem;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding-inline: 0.5rem;
+  border-radius: var(--br-all);
+}
+.wine:hover .overlay {
+  opacity: 1;
+}
+footer {
+  background-color: #1b1210;
+  border-radius: var(--br-bottom);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+footer img {
+  width: 30%;
+  border-radius: var(--br-bottom);
+}
+.footer-content {
+  color: #4a4848;
+}
+.footer-content .name {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+}
